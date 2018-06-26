@@ -3,9 +3,15 @@ package book;
 public class BookBuilder {
 	private String name;
 	private int price;
+	private int stock;
 
 	public BookBuilder() {
 		
+	}
+	
+	public BookBuilder setstock(int stock) {
+		this.stock = stock;
+		return this;
 	}
 	
 	public BookBuilder setName(String name) {
@@ -19,6 +25,6 @@ public class BookBuilder {
 	}
 	
 	public Book build() {
-		return new Book(this.name,this.price);
+		return new Book(this.name,this.price,this.stock);
 	}
 }

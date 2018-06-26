@@ -3,13 +3,13 @@ package book;
 public class Book{
 	private String name;
 	private int price;	
+	private int stock;
 
-	public Book(String name,int price) {
+	public Book(String name,int price,int stock) {
 		this.name = name;
 		this.price = price;
+		this.stock = stock;
 	}
-
-
 
 	@Override
 	public int hashCode() {
@@ -17,10 +17,9 @@ public class Book{
 		int result = 1;
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		result = prime * result + price;
+		result = prime * result + stock;
 		return result;
 	}
-
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -38,7 +37,13 @@ public class Book{
 			return false;
 		if (price != other.price)
 			return false;
+		if (stock != other.stock)
+			return false;
 		return true;
 	}
+
+
+
+	
 	
 }
