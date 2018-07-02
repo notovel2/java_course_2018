@@ -18,7 +18,8 @@ public class HarryPotterTest {
 		order.addOrder(new Book("H3",8.0), 2);
 		order.addOrder(new Book("H4",8.0), 1);
 		order.addOrder(new Book("H5",8.0), 1);
-		double price = order.calculatePrice();
+		order.process();
+		double price = order.getNetPrice();
 		assertEquals(51.60, price,2);
 	}
 	
@@ -30,7 +31,8 @@ public class HarryPotterTest {
 		order.addOrder(new Book("H3",8.0), 3);
 		order.addOrder(new Book("H4",8.0), 4);
 		order.addOrder(new Book("H5",8.0), 6);
-		double price = order.calculatePrice();
+		order.process();
+		double price = order.getNetPrice();
 		assertEquals(138.80, price,2);
 	}
 
