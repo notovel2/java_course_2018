@@ -9,6 +9,9 @@ public class FizzBuzzTest {
 	@Test
 	public void say_1_when_input_1() {
 		FizzBuzz fizzBuzz = new FizzBuzz();
+		fizzBuzz.setDivideElement(new DivideByThree());
+		fizzBuzz.setDivideElement(new DivideByFive());
+		fizzBuzz.setDivideElement(new DivideBySeven());
 		String actualResult = fizzBuzz.say(1);
 		assertEquals("1", actualResult);
 	}
@@ -16,6 +19,9 @@ public class FizzBuzzTest {
 	@Test
 	public void say_2_when_input_2() {
 		FizzBuzz fizzBuzz = new FizzBuzz();
+		fizzBuzz.setDivideElement(new DivideByThree());
+		fizzBuzz.setDivideElement(new DivideByFive());
+		fizzBuzz.setDivideElement(new DivideBySeven());
 		String actualResult = fizzBuzz.say(2);
 		assertEquals("2", actualResult);
 	}
@@ -23,6 +29,9 @@ public class FizzBuzzTest {
 	@Test
 	public void say_Fizz_when_input_3() {
 		FizzBuzz fizzBuzz = new FizzBuzz();
+		fizzBuzz.setDivideElement(new DivideByThree());
+		fizzBuzz.setDivideElement(new DivideByFive());
+		fizzBuzz.setDivideElement(new DivideBySeven());
 		String actualResult = fizzBuzz.say(3);
 		assertEquals("Fizz", actualResult);
 	}
@@ -30,6 +39,9 @@ public class FizzBuzzTest {
 	@Test
 	public void say_4_when_input_4() {
 		FizzBuzz fizzBuzz = new FizzBuzz();
+		fizzBuzz.setDivideElement(new DivideByThree());
+		fizzBuzz.setDivideElement(new DivideByFive());
+		fizzBuzz.setDivideElement(new DivideBySeven());
 		String actualResult = fizzBuzz.say(4);
 		assertEquals("4", actualResult);
 	}
@@ -37,6 +49,9 @@ public class FizzBuzzTest {
 	@Test
 	public void say_Buzz_when_input_5() {
 		FizzBuzz fizzBuzz = new FizzBuzz();
+		fizzBuzz.setDivideElement(new DivideByThree());
+		fizzBuzz.setDivideElement(new DivideByFive());
+		fizzBuzz.setDivideElement(new DivideBySeven());
 		String actualResult = fizzBuzz.say(5);
 		assertEquals("Buzz", actualResult);
 	}
@@ -44,6 +59,9 @@ public class FizzBuzzTest {
 	@Test
 	public void say_Fizz_when_input_6() {
 		FizzBuzz fizzBuzz = new FizzBuzz();
+		fizzBuzz.setDivideElement(new DivideByThree());
+		fizzBuzz.setDivideElement(new DivideByFive());
+		fizzBuzz.setDivideElement(new DivideBySeven());
 		String actualResult = fizzBuzz.say(6);
 		assertEquals("Fizz", actualResult);
 	}
@@ -51,13 +69,19 @@ public class FizzBuzzTest {
 	@Test
 	public void say_7_when_input_7() {
 		FizzBuzz fizzBuzz = new FizzBuzz();
+		fizzBuzz.setDivideElement(new DivideByThree());
+		fizzBuzz.setDivideElement(new DivideByFive());
+		fizzBuzz.setDivideElement(new DivideBySeven());
 		String actualResult = fizzBuzz.say(7);
-		assertEquals("7", actualResult);
+		assertEquals("KBTG", actualResult);
 	}
 
 	@Test
 	public void say_8_when_input_8() {
 		FizzBuzz fizzBuzz = new FizzBuzz();
+		fizzBuzz.setDivideElement(new DivideByThree());
+		fizzBuzz.setDivideElement(new DivideByFive());
+		fizzBuzz.setDivideElement(new DivideBySeven());
 		String actualResult = fizzBuzz.say(8);
 		assertEquals("8", actualResult);
 	}
@@ -65,6 +89,9 @@ public class FizzBuzzTest {
 	@Test
 	public void say_Fizz_when_input_9() {
 		FizzBuzz fizzBuzz = new FizzBuzz();
+		fizzBuzz.setDivideElement(new DivideByThree());
+		fizzBuzz.setDivideElement(new DivideByFive());
+		fizzBuzz.setDivideElement(new DivideBySeven());
 		String actualResult = fizzBuzz.say(9);
 		assertEquals("Fizz", actualResult);
 	}
@@ -72,6 +99,9 @@ public class FizzBuzzTest {
 	@Test
 	public void say_Buzz_when_input_10() {
 		FizzBuzz fizzBuzz = new FizzBuzz();
+		fizzBuzz.setDivideElement(new DivideByThree());
+		fizzBuzz.setDivideElement(new DivideByFive());
+		fizzBuzz.setDivideElement(new DivideBySeven());
 		String actualResult = fizzBuzz.say(10);
 		assertEquals("Buzz", actualResult);
 	}
@@ -79,7 +109,21 @@ public class FizzBuzzTest {
 	@Test
 	public void say_FizzBuzz_when_input_15() {
 		FizzBuzz fizzBuzz = new FizzBuzz();
+		fizzBuzz.setDivideElement(new DivideByThree());
+		fizzBuzz.setDivideElement(new DivideByFive());
+		fizzBuzz.setDivideElement(new DivideBySeven());
 		String actualResult = fizzBuzz.say(15);
 		assertEquals("FizzBuzz", actualResult);
+	}
+	
+	@Test
+	public void say_FizzBuzz_when_input_35() {
+		FizzBuzz fizzBuzz = new FizzBuzz();
+		fizzBuzz.setDivideElement(new DivideByThree());
+		fizzBuzz.setDivideElement(new DivideByFive());
+		fizzBuzz.setDivideElement(new DivideBySeven());
+		fizzBuzz.setDivideElement(new DivideBySeven());
+		String actualResult = fizzBuzz.say(35);
+		assertEquals("BuzzKBTG", actualResult);
 	}
 }
