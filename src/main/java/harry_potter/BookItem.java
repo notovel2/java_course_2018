@@ -1,11 +1,17 @@
 package harry_potter;
 
-public class BookItem {
+import java.util.Comparator;
+
+public class BookItem implements Comparable<BookItem>{
 	private int quantity;
 	private Book book;
 	
 	public void addQuantity(int quantity) {
 		this.quantity += quantity;
+	}
+	
+	public void decreaseQuantity(int quantity) {
+		this.quantity -= quantity;
 	}
 	
 	public BookItem(String bookName, double price, int quantity) {
@@ -57,6 +63,30 @@ public class BookItem {
 		} else if (!book.equals(other.book))
 			return false;
 		return true;
+	}
+	
+	public int compare(BookItem o1, BookItem o2) {
+		if(o1.getQuantity() > o2.getQuantity()) {
+			return 1;
+		}
+		else if(o1.getQuantity() < o2.getQuantity()) {
+			return -1;
+		}
+		else {
+			return 0;
+		}
+	}
+
+	public int compareTo(BookItem object) {
+		if(quantity > object.getQuantity()) {
+			return 1;
+		}
+		else if(quantity < object.getQuantity()) {
+			return -1;
+		}
+		else {
+			return 0;
+		}
 	}
 
 }
